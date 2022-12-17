@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('Здравствуйте, ' . get_current_user()) }}
                 </div>
             </div>
         </div>

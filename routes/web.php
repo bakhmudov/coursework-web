@@ -16,7 +16,7 @@ use App\Http\Controllers\QuestionnairesController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 Route::get('/questionnaires', [QuestionnairesController::class, 'index']);
 Route::get('/questionnaires/create', [QuestionnairesController::class, 'create']);

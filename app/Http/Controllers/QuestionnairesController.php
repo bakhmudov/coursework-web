@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class QuestionnairesController extends Controller
 {
     public function index() {
-        return view('questionnaire');
+        $questionnaires = Questionnaires::all();
+        return view('questionnaire.index', compact('questionnaires'));
     }
 
     public function create() {
