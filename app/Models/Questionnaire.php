@@ -6,9 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Questionnaires extends Model
+class Questionnaire extends Model
 {
     use HasFactory;
+    use SoftDeletes;
 
-    protected $guarded = [];
+    protected $table = 'questionnaires';
+    protected $guarded = false;
+
 }

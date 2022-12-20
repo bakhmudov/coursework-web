@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Questionnaires;
+use App\Models\Questionnaire;
 use Illuminate\Http\Request;
 
 class SpecialtiesController extends Controller

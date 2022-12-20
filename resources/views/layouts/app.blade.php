@@ -31,13 +31,12 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="{{ '/questionnaires' }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Анкеты
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Создать анкету абитуриента</a></li>
-                                <li><a class="dropdown-item" href="#">Редактировать анкету абитуриента</a></li>
-                                <li><a class="dropdown-item" href="#">Удалить анкету</a></li>
+                                <li><a href="{{ '/questionnaires' }}" class="dropdown-item">Посмотреть анкеты</a></li>
+                                <li><a class="dropdown-item" href="{{ '/questionnaires/create' }}">Создать анкету абитуриента</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">

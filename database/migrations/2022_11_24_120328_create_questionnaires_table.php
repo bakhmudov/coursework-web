@@ -27,6 +27,9 @@ return new class extends Migration
             $table->text('address');
             $table->text('phone_number')->nullable();
             $table->text('specialty_code')->nullable();
+            $table->timestamps();
+
+            $table->softDeletes();
         });
     }
 

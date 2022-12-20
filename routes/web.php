@@ -18,10 +18,13 @@ use App\Http\Controllers\QuestionnairesController;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/questionnaires', [QuestionnairesController::class, 'index']);
-Route::get('/questionnaires/create', [QuestionnairesController::class, 'create']);
-Route::get('/questionnaires/update', [QuestionnairesController::class, 'update']);
-Route::get('/questionnaires/delete', [QuestionnairesController::class, 'delete']);
+Route::get('/questionnaires', [QuestionnairesController::class, 'index'])->name('questionnaire.index');
+Route::get('/questionnaires/create', [QuestionnairesController::class, 'create'])->name('questionnaire.create');
+Route::post('/questionnaires', [QuestionnairesController::class, 'store'])->name('questionnaire.store');
+Route::get('/questionnaires/{questionnaire}', [QuestionnairesController::class, 'show'])->name('questionnaire.show');
+Route::get('/questionnaires/{questionnaire}/edit', [QuestionnairesController::class, 'edit'])->name('questionnaire.edit');
+Route::patch('/questionnaires/{questionnaire}', [QuestionnairesController::class, 'update'])->name('questionnaire.update');
+Route::delete('/questionnaires/{questionnaire}', [QuestionnairesController::class, 'destroy'])->name('questionnaire.delete');
 
 Route::get('/specialties', [QuestionnairesController::class, 'index']);
 
