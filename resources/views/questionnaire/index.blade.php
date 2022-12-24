@@ -36,7 +36,7 @@
                         <td>{{ $questionnaire->honors }}</td>
                         <td>{{ $questionnaire->address }}</td>
                         <td>{{ $questionnaire->phone_number }}</td>
-                        <td>{{ $questionnaire->specialty_code }}</td>
+                        <td>{{ $questionnaire->specialty_id }}</td>
 
                     </tr>
 

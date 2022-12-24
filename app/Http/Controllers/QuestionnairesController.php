@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Questionnaire;
+use App\Models\Specialty;
 use Illuminate\Http\Request;
 
 class QuestionnairesController extends Controller
@@ -13,7 +14,8 @@ class QuestionnairesController extends Controller
     }
 
     public function create() {
-        return view('questionnaire.create');
+        $specialties = Specialty::all();
+        return view('questionnaire.create', compact('specialties'));
     }
 
     public function store() {
@@ -27,7 +29,7 @@ class QuestionnairesController extends Controller
             'honors' => '',
             'address' => '',
             'phone_number' => '',
-            'specialty_code' => '',
+            'specialty_id' => '',
         ]);
         Questionnaire::create($data);
         return redirect()->route('questionnaire.index');

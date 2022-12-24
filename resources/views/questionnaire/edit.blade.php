@@ -64,7 +64,7 @@
                     </div>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Код специальности" name="specialty_code"
-                               value="{{ $questionnaire->specialty_code }}">
+                               value="{{ $questionnaire->specialty_id }}">
                     </div>
 
                     <input type="submit" class="btn btn-primary" value="Сохранить изменения">

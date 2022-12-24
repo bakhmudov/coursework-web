@@ -52,9 +52,13 @@
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Номер телефона" name="phone_number">
                     </div>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Код специальности" name="specialty_code">
-                    </div>
+
+                    <label for="specialty">Выберите специальность</label>
+                    <select class="form-select mb-3" id="specialty" name="specialty_id">
+                        @foreach($specialties as $specialty)
+                            <option value="{{ $specialty->id }}">{{ $specialty->title }}</option>
+                        @endforeach
+                    </select>
 
                     <input type="submit" class="btn btn-outline-primary" value="Сохранить анкету">
                 </form>
